@@ -1,3 +1,5 @@
+## [UNDER CONSTRUCTION]  
+
 # Welcome to the documentation page for SEPIA
 Here you will (hopefully) find everything you need to know to get started with SEPIA.  
 
@@ -5,12 +7,20 @@ Here you will (hopefully) find everything you need to know to get started with S
   <img src="https://github.com/SEPIA-Framework/SEPIA-Framework.github.io/blob/master/img/icon-w.png" alt="S.E.P.I.A. Logo"/>
 </p>
 
+## Quick-start (for users)
+To use S.E.P.I.A. your personal, digital, open-source voice assistant you need 2 things:
+
+1. One of S.E.P.I.A.'s client apps, e.g. the web version: https://sepia-framework.github.io/app/ (app store versions coming soon)
+2. Access to a S.E.P.I.A. server. This can be your own one, running e.g. on a Raspberry Pi or your Windows/Mac PC or you can find an open one hosted by a friend or a company (Note: the official SEPIA team is currently not hosting any public servers).
+
+To connect to a custom server simply open the app, skip the log-in, change the "host name" in the main menu and restart the app. A typical host name would be "my-server.example.org/sepia". 
+
 ## Wiki
 Checkout the wiki for detailed descriptions:
 [S.E.P.I.A. Framework Wiki](../../wiki)
 
-## Quick-start (for everyone ... ok at least every DIY'er ^^)
-A release version for easy-installation is on the way, stay tuned! :-)
+## Quick-start (for makers)
+A release version for easy-installation of the S.E.P.I.A. server stack is on the way, stay tuned! :-)
 
 ## Build-your-own (for experts)
 Since everything in S.E.P.I.A. is open-source you can always build the whole framework from scratch using the Github repositories.
@@ -37,5 +47,8 @@ Note the flag **"--my"**! It can be used to switch server configurations between
   * Elasticsearch (if not running already)
   * Assist-Server, e.g. `java -jar sepia-xyz.jar --my` (used by other servers get config data and authenticate users)
   * Chat-Server and Teach-Server (order does not matter here)
-  
+    
 * Use one of the SEPIA clients to connect to your server stack. Inside the client you might want to set a proper host-name (see menu). If you are not running the client on the same machine you can replace 'localhost' by either an IP address or you can set-up your own proxy (e.g. [Nginx](https://de.wikipedia.org/wiki/Nginx)). Another great tool to use here is [ngrok](https://ngrok.com/docs). More help about this part will be added soon!
+
+## Final notes
+If you run your own server and decide to open it to the public or to your friends please make sure to inform them about your data privacy policy since you are operating a database with user-accounts.
