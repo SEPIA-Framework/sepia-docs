@@ -7,20 +7,21 @@ Here you will (hopefully) find everything you need to know to get started with S
   <img src="https://github.com/SEPIA-Framework/SEPIA-Framework.github.io/blob/master/img/icon-w.png" alt="S.E.P.I.A. Logo"/>
 </p>
 
-## Quick-start (for users)
-To use S.E.P.I.A. your personal, digital, open-source voice assistant you need 2 things:
-
-1. One of S.E.P.I.A.'s client apps, e.g. the web version: https://sepia-framework.github.io/app/ (app store versions coming soon)
-2. Access to a S.E.P.I.A. server. This can be your own one, running e.g. on a Raspberry Pi or your Windows/Mac PC or you can find an open one hosted by a friend or a company (Note: the official SEPIA team is currently not hosting any public servers).
-
-To connect to a custom server simply open the app, skip the log-in, change the "host name" in the main menu and restart the app. A typical host name would be "my-server.example.org/sepia". 
-
 ## Wiki
 Checkout the wiki for detailed descriptions:
 [S.E.P.I.A. Framework Wiki](../../wiki)
 
+## Quick-start (for users)
+To use S.E.P.I.A. your personal, digital, open-source voice assistant you need 2 things:
+
+1. One of S.E.P.I.A.'s client apps, e.g. the web version: https://sepia-framework.github.io/app/ (app store versions coming soon)
+2. Access to a S.E.P.I.A. server. This can be [your own one](https://github.com/SEPIA-Framework/sepia-installation-and-setup), running e.g. on a Raspberry Pi or your Windows/Mac PC (see below) or you can find an open one hosted by a friend or a company (Note: the official SEPIA team is currently not hosting any public servers).
+
+To connect to a custom server simply open the app, skip the log-in, change the "host name" in the main menu and restart the app. A typical host name would be "my-server.example.org/sepia". 
+
 ## Quick-start (for makers)
-A release version for easy-installation of the S.E.P.I.A. server stack is on the way, stay tuned! :-)
+Release bundles and instructions for easy-installation of the S.E.P.I.A. server stack can be found here:
+https://github.com/SEPIA-Framework/sepia-installation-and-setup
 
 ## Build-your-own (for experts)
 Since everything in S.E.P.I.A. is open-source you can always build the whole framework from scratch using the Github repositories.
