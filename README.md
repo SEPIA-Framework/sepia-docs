@@ -28,7 +28,7 @@ Basically the steps are:
 * Make sure you have Oracle Java 1.8 installed
 * Download the latest SEPIA-custom-bundle from [here](https://github.com/SEPIA-Framework/sepia-installation-and-setup/releases/latest)
 * Extract the zip and run "setup"
-* Run "start" and continue with "quick-start (for users)" :-)
+* Start the server (e.g. with the "run"-script) and continue with "quick-start (for users)" :-)
 
 ## Build-your-own (for experts)
 Since everything in S.E.P.I.A. is open-source you can always build the whole framework from scratch using the Github repositories.
