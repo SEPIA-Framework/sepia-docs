@@ -5,6 +5,9 @@ Here you will (hopefully) find everything you need to know to get started with S
   <img src="https://github.com/SEPIA-Framework/SEPIA-Framework.github.io/blob/master/img/icon-w.png" alt="S.E.P.I.A. Logo"/>
 </p>
 
+## Intro
+S.E.P.I.A. stands for server-based, extendable, personal, intelligent assistant and is a modular framework for voice-assistants on the one hand and a ready-for-action digital assistant app that works cross-platform on browser, iOS and Android on the other hand. The server is based on Java and can be operated on Windows, Linux and Mac. Due to it's lightweight architecture it even works on a Raspberry Pi smooth and easy :relieved: :robot:
+
 ## Wiki
 Checkout the wiki for detailed descriptions:
 [S.E.P.I.A. Framework Wiki](../../wiki)
