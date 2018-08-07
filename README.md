@@ -19,7 +19,7 @@ The SEPIA Framework basically consists of 2 major parts: The [SEPIA Client](http
 
 **Assist-Server:** The "brain" of SEPIA that receives requests from the client via the HTTP REST API and takes care of the natural-language-understanding (intent and NER), conversation flow, smart-service integration (like a to-do list or news service), user-accounts and more. The Assist-Server can run on it's own Raspberry Pi or parallel to the client on more powerful systems (desktop PC ect.).  
   
-Other notable components of the SEPIA Framework include a [WebSocket server](https://github.com/SEPIA-Framework/sepia-websocket-server-java) for chats and a [wake-word tool](https://github.com/SEPIA-Framework/sepia-wakeword-tools) for **"Hey SEPIA"** that even works on a Raspberry Pi Zero :relaxed: (thanks to Porcupine by Picovoice).  
+Other notable components of the SEPIA Framework include a [WebSocket server](https://github.com/SEPIA-Framework/sepia-websocket-server-java) for chats and a [wake-word tool](https://github.com/SEPIA-Framework/sepia-wakeword-tools) for **"Hey SEPIA"** that even works on a Raspberry Pi Zero :relaxed: (thanks to Porcupine by Picovoice) and a [Speech-To-Text server](https://github.com/SEPIA-Framework/sepia-stt-server) that supports Kaldi open-source ASR (thanks to [Zamia speech](https://github.com/gooofy/zamia-speech)).  
 
 ## Languages
 Currently SEPIA works in German and English with some services like news and soccer-results still optimized only for German meaning you will get an answer in English but see German news outlets for example or only Bundesliga results. The smart-services are constantly improving though.
