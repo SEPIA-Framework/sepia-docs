@@ -46,7 +46,7 @@ Basically the steps are:
 * Extract the zip and run "setup" (.bat for Windows, .sh for Linux/Mac)
 * Start the server (e.g. with the "run-speia"-script) and continue with "quick-start (for users)" :-)
 * Optionally start the SEPIA proxy (e.g. with the "run-reverse-proxy"-script) if you don't use any other proxies
-* Continue with "Quick-start (for users)" and use the proxy address as hostname :-)
+* Continue with "Quick-start (for users)" and use 'localhost' or the proxy address (with path /sepia) as hostname :-)
 
 ## API keys for services
 Some services integrated in SEPIA require an API key to run properly (e.g. Weather via forecast.io). Find out how to get them (for free) [here](../../wiki/API-keys).
