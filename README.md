@@ -34,7 +34,7 @@ To use S.E.P.I.A. your personal, digital, open-source voice assistant you need 2
 1. One of S.E.P.I.A.'s client apps, e.g. the web version: https://sepia-framework.github.io/app/ (app store versions coming soon)
 2. Access to a S.E.P.I.A. server. This can be [your own one](https://github.com/SEPIA-Framework/sepia-installation-and-setup), running e.g. on a Raspberry Pi or your Windows/Mac PC (see below) or you can find an open one hosted by a friend or a company (Note: the official SEPIA team is currently not hosting any public servers).
 
-To connect to a custom server simply open the app, change the "hostname" in the log-in screen and restart the app. A typical hostname would be "my-server.example.org/sepia" or "[your-ngrok-url]/sepia" (for test-servers). 
+To connect to a custom server simply open the app, change the "hostname" in the log-in screen and restart the app. A typical hostname could be the IP of the server, "raspberrypi.local", "my-server.example.org/sepia" or "[your-ngrok-url]/sepia" (for test-servers). 
 
 ## Quick-start (for makers)
 Release bundles and instructions for easy-installation of the S.E.P.I.A. server stack on Linux, Windows or Mac can be found here:
@@ -42,11 +42,14 @@ https://github.com/SEPIA-Framework/sepia-installation-and-setup
 
 Basically the steps are:
 * Make sure you have at least Java 8 installed
-* Download the latest SEPIA-custom-bundle from [here](https://github.com/SEPIA-Framework/sepia-installation-and-setup/releases/latest)
+* Download the latest SEPIA-Home bundle from [here](https://github.com/SEPIA-Framework/sepia-installation-and-setup/releases/latest)
 * Extract the zip and run "setup" (.bat for Windows, .sh for Linux/Mac)
-* Start the server (e.g. with the "run-speia"-script) and continue with "quick-start (for users)" :-)
-* Optionally start the SEPIA proxy (e.g. with the "run-reverse-proxy"-script) if you don't use any other proxies
-* Continue with "Quick-start (for users)" and use 'localhost' or the proxy address (with path /sepia) as hostname :-)
+* Start the server (e.g. with the "run-sepia"-script) and continue with "quick-start (for users)" :-)
+* Optionally start the SEPIA proxy (e.g. with the "run-reverse-proxy"-script) if you need one 
+* Continue with "Quick-start (for users)" and use 'localhost', your IP or the proxy address (with path /sepia) as hostname :-)
+
+## Questions and bug-reports
+If you have any questions, need help or want to report a bug please go [here](https://github.com/SEPIA-Framework/sepia-docs/issues).
 
 ## API keys for services
 Some services integrated in SEPIA require an API key to run properly (e.g. Weather via forecast.io). Find out how to get them (for free) [here](../../wiki/API-keys).
