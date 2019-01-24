@@ -8,6 +8,14 @@ Here you will (hopefully) find everything you need to know to get started with S
 Overview of SEPIA ecosystem (note: some parts are still in the dev branches).  
 For image icon attributions please check the [homepage](https://sepia-framework.github.io/#attributions)
 
+## Wiki, Blog & News
+Checkout the wiki for detailed descriptions:
+[S.E.P.I.A. Framework Wiki](../../wiki)  
+Visit Twitter for the latest news:
+[S.E.P.I.A. Twitter Feed](https://twitter.com/sepia_fw)  
+Visit the blog for summaries and guides:
+[S.E.P.I.A. Blog](https://medium.com/sepia-framework)
+
 ## Intro
 **S.E.P.I.A. stands for server-based, extendable, personal, intelligent assistant** and is a modular framework for voice-assistants on the one hand and a ready-for-action digital assistant app that works cross-platform on browser, iOS and Android on the other hand. The server is based on Java and can be operated on Windows, Linux and Mac. Due to it's lightweight architecture it even works on a Raspberry Pi smooth and easy :relieved: :robot:  
 SEPIA has smart-services for: **news, music (radio), timers, alarms, reminders, to-do and shopping lists, navigation, places, weather, Bundesliga soccer-results, Wikipedia, web-search and a bit of small-talk**. Some smart-home commands are prepared for integration as well and are waiting to get connected to other great open-source tools like Home Assistant (anybody wants to help? ^^).
@@ -23,14 +31,6 @@ Other notable components of the SEPIA Framework include a [WebSocket server](htt
 
 ## Languages
 Currently SEPIA works in German and English with some services like news and soccer-results still optimized only for German meaning you will get an answer in English but see German news outlets for example or only Bundesliga results. The smart-services are constantly improving though.
-
-## Wiki, Blog & News
-Checkout the wiki for detailed descriptions:
-[S.E.P.I.A. Framework Wiki](../../wiki)  
-Visit Twitter for the latest news:
-[S.E.P.I.A. Twitter Feed](https://twitter.com/sepia_fw)  
-Visit the blog for summaries and guides:
-[S.E.P.I.A. Blog](https://medium.com/sepia-framework)
 
 ## Quick-start (for users)
 To use S.E.P.I.A. your personal, digital, open-source voice assistant you need 2 things:
