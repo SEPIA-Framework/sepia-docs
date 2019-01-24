@@ -24,9 +24,13 @@ Other notable components of the SEPIA Framework include a [WebSocket server](htt
 ## Languages
 Currently SEPIA works in German and English with some services like news and soccer-results still optimized only for German meaning you will get an answer in English but see German news outlets for example or only Bundesliga results. The smart-services are constantly improving though.
 
-## Wiki
+## Wiki, Blog & News
 Checkout the wiki for detailed descriptions:
-[S.E.P.I.A. Framework Wiki](../../wiki)
+[S.E.P.I.A. Framework Wiki](../../wiki)  
+Visit Twitter for the latest news:
+[S.E.P.I.A. Twitter Feed](https://twitter.com/sepia_fw)  
+Visit the blog for summaries and guides:
+[S.E.P.I.A. Blog](https://medium.com/sepia-framework)
 
 ## Quick-start (for users)
 To use S.E.P.I.A. your personal, digital, open-source voice assistant you need 2 things:
