@@ -17,8 +17,8 @@ Visit the blog for summaries and guides:
 [S.E.P.I.A. Blog](https://medium.com/sepia-framework)
 
 ## Intro
-**S.E.P.I.A. stands for server-based, extendable, personal, intelligent assistant** and is a modular framework for voice-assistants on the one hand and a ready-for-action digital assistant app that works cross-platform on browser, iOS and Android on the other hand. The server is based on Java and can be operated on Windows, Linux and Mac. Due to it's lightweight architecture it even works on a Raspberry Pi smooth and easy :relieved: :robot:  
-SEPIA has smart-services for: **news, music (radio), timers, alarms, reminders, to-do and shopping lists, navigation, places, weather, Bundesliga soccer-results, Wikipedia, web-search and a bit of small-talk**. Some smart-home commands are prepared for integration as well and are waiting to get connected to other great open-source tools like Home Assistant (anybody wants to help? ^^).
+**S.E.P.I.A. stands for server-based, extendable, personal, intelligent assistant** and is a modular framework for voice-assistants on the one hand and a ready-for-action digital assistant app that works cross-platform on browser, iOS and Android on the other hand. The server is based on Java and can be operated on Windows, Linux and Mac. Due to it's lightweight architecture it even runs smooth and easy on a Raspberry Pi :relieved: :robot:  
+SEPIA already has smart-services for: **news, music (radio), timers, alarms, reminders, to-do and shopping lists, navigation, places, weather, Bundesliga soccer-results, Wikipedia, web-search, smart home (e.g. using open-source tools like [openHAB](https://www.openhab.org)), a bit of small-talk and more**. If you want to realize your own ideas and build a service yourself you can do that via the [SEPIA SDK](https://github.com/SEPIA-Framework/sepia-sdk-java) or using the code editor integrated into the [SEPIA Control HUB](https://github.com/SEPIA-Framework/sepia-admin-tools/tree/master/admin-web-tools)!
 
 ### Architecture
 The SEPIA Framework basically consists of 2 major parts: The [SEPIA Client](https://github.com/SEPIA-Framework/sepia-html-client-app) and the [Assist-Server](https://github.com/SEPIA-Framework/sepia-assist-server).  
@@ -30,12 +30,12 @@ The SEPIA Framework basically consists of 2 major parts: The [SEPIA Client](http
 Other notable components of the SEPIA Framework include a [WebSocket server](https://github.com/SEPIA-Framework/sepia-websocket-server-java) for chats and a [wake-word tool](https://github.com/SEPIA-Framework/sepia-wakeword-tools) for **"Hey SEPIA"** that even works on a Raspberry Pi Zero :relaxed: (thanks to Porcupine by Picovoice) and a [Speech-To-Text server](https://github.com/SEPIA-Framework/sepia-stt-server) that supports Kaldi open-source ASR (thanks to [Zamia speech](https://github.com/gooofy/zamia-speech)).  
 
 ## Languages
-Currently SEPIA works in German and English with some services like news and soccer-results still optimized only for German meaning you will get an answer in English but see German news outlets for example or only Bundesliga results. The smart-services are constantly improving though.
+Currently SEPIA works in German and English with basic support (inside the client) to create custom commands in other common languages. Some services like news and soccer-results are optimized for German meaning you will get an answer in English but might see a mix of English and German news outlets or soccer results for the Bundesliga. The smart-services are constantly improving though and you can easily edit the list of outlets.
 
 ## Quick-start (for users)
 To use S.E.P.I.A. your personal, digital, open-source voice assistant you need 2 things:
 
-1. One of S.E.P.I.A.'s client apps, e.g. the web version: https://sepia-framework.github.io/app/ (app store versions coming soon)
+1. One of S.E.P.I.A.'s client apps, e.g. the web version: https://sepia-framework.github.io/app/ or the [official Android app](https://play.google.com/store/apps/details?id=de.bytemind.sepia.app.web)
 2. Access to a S.E.P.I.A. server. This can be [your own one](https://github.com/SEPIA-Framework/sepia-installation-and-setup), running e.g. on a Raspberry Pi or your Windows/Mac PC (see below) or you can find an open one hosted by a friend or a company (Note: the official SEPIA team is currently not hosting any public servers).
 
 To connect to a custom server simply open the app, change the "hostname" in the log-in screen and restart the app. A typical hostname could be the IP of the server, "raspberrypi.local", "my-server.example.org/sepia" or "[your-ngrok-url]/sepia" (for test-servers). 
