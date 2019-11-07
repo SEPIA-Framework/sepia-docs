@@ -8,6 +8,12 @@ Here you will (hopefully) find everything you need to know to get started with S
 Overview of SEPIA ecosystem (note: some parts are still in the dev branches).  
 For image icon attributions please check the [homepage](https://sepia-framework.github.io/#attributions)
 
+## Downloads
+* SEPIA-Home (Server, Web-App + Apk, Tools): [v2.3.1](https://github.com/SEPIA-Framework/sepia-installation-and-setup/releases)
+* Android Play Store: [v0.19.1](https://play.google.com/store/apps/details?id=de.bytemind.sepia.app.web)
+* SEPIA SDK: [v0.9.11](https://github.com/SEPIA-Framework/sepia-sdk-java)
+* SEPIA STT Server: [beta v2.1](https://hub.docker.com/r/sepia/stt-server)
+
 ## Wiki, Blog & News
 Checkout the wiki for detailed descriptions:
 [S.E.P.I.A. Framework Wiki](../../wiki)  
