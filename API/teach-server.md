@@ -8,7 +8,7 @@ General variables:
 
 ### Submit new command
 
-´´´
+```
 Javascript Ajax call example config:
 {
     "url": "http://[teach-server-host]/submitPersonalCommand",
@@ -35,4 +35,4 @@ Javascript Ajax call example config:
         "content-type": "application/x-www-form-urlencoded"
     }
 }
-´´´
+```
