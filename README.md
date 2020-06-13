@@ -29,11 +29,11 @@ SEPIA already has smart-services for: **news, music (radio), timers, alarms, rem
 ### Architecture
 The SEPIA Framework basically consists of 2 major parts: The [SEPIA Client](https://github.com/SEPIA-Framework/sepia-html-client-app) and the [Assist-Server](https://github.com/SEPIA-Framework/sepia-assist-server).  
   
-**SEPIA Client:** The user interface that takes care of the speech-recognition to transform voice into text, sending that text to a SEPIA server for interpretation, receiving the result (in JSON format) and presenting it to the user via text, graphical elements and/or sound (text-to-speech). Typical clients can be iOS and Android apps, websites or even command-line tools combined with just a microphone.
+**SEPIA Client:** The user interface that takes care of the speech-recognition to transform voice into text, sending that text to a SEPIA server for interpretation, receiving the result (in JSON format) and presenting it to the user via text, graphical elements and/or sound (text-to-speech). There are clients for the browser, Android, iOS and a [DIY version](https://github.com/SEPIA-Framework/sepia-installation-and-setup/tree/master/sepia-client-installation) that even works "headless" for example on a Raspberry Pi.
 
-**Assist-Server:** The "brain" of SEPIA that receives requests from the client via the HTTP REST API and takes care of the natural-language-understanding (intent and NER), conversation flow, smart-service integration (like a to-do list or news service), user-accounts and more. The Assist-Server can run on it's own Raspberry Pi or parallel to the client on more powerful systems (desktop PC ect.).  
+**Assist-Server:** The "brain" of SEPIA that receives requests from the client via the HTTP REST API and takes care of the natural-language-understanding (intent and NER), conversation flow, smart-service integration (like a to-do list or news service), user-accounts, Text-to-Speech, **"Hey SEPIA"** wake-word detection and more. The Assist-Server can run on it's own hardware for example on SBCs like a Raspberry Pi 3 or parallel to the client on more powerful systems (RPi4, desktop PC ect.).  
   
-Other notable components of the SEPIA Framework include a [WebSocket server](https://github.com/SEPIA-Framework/sepia-websocket-server-java) for chats and a [wake-word tool](https://github.com/SEPIA-Framework/sepia-wakeword-tools) for **"Hey SEPIA"** that even works on a Raspberry Pi Zero :relaxed: (thanks to Porcupine by Picovoice) and a [Speech-To-Text server](https://github.com/SEPIA-Framework/sepia-stt-server) that supports Kaldi open-source ASR (thanks to [Zamia speech](https://github.com/gooofy/zamia-speech)).  
+Other notable components of the SEPIA Framework are the [WebSocket server](https://github.com/SEPIA-Framework/sepia-websocket-server-java) for multi-channel chats and duplex data transfer, the [Teach-Server](https://github.com/SEPIA-Framework/sepia-teach-server) to store custom commands, a [Speech-To-Text server](https://github.com/SEPIA-Framework/sepia-stt-server) that supports Kaldi open-source ASR (thanks to [Zamia speech](https://github.com/gooofy/zamia-speech)) and a stand-alone [wake-word tool](https://github.com/SEPIA-Framework/sepia-wakeword-tools) that even works on a Raspberry Pi Zero :relaxed: (thanks to Porcupine by Picovoice).  
 
 ## Languages
 Currently SEPIA works in German and English with basic support (inside the client) to create custom commands in other common languages. Some services like news and soccer-results are optimized for German meaning you will get an answer in English but might see a mix of English and German news outlets or soccer results for the Bundesliga. The smart-services are constantly improving though and you can easily edit the list of outlets.
@@ -52,7 +52,7 @@ Basic steps to install the server:
 * Make sure you have Java JDK 8 or 11 installed
 * Download the latest SEPIA-Home bundle from [here](https://github.com/SEPIA-Framework/sepia-installation-and-setup/releases/latest)
 * Extract the zip and run "setup" (.bat for Windows, .sh for Linux/Mac)
-* Start the server (e.g. with the "run-sepia"-script) and continue with "Quick-start (for users)" [above](#quick-start-for-makers) :-)
+* Start the server (e.g. with the "run-sepia"-script) and continue with "Quick-start (for users)" [above](#quick-start-for-users) :-)
 * Optionally start the SEPIA proxy (e.g. with the "run-reverse-proxy"-script) if you need one 
 * Continue with "Quick-start (for users)" and use 'localhost', your IP or the proxy address (with path /sepia) as hostname :-)
 
