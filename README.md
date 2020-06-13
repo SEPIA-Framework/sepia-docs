@@ -11,7 +11,7 @@ For image icon attributions please check the [homepage](https://sepia-framework.
 ## Downloads
 * SEPIA-Home (Server, Web-App + Apk, Tools): [v2.5.0](https://github.com/SEPIA-Framework/sepia-installation-and-setup/releases)
 * Android Play Store: [v0.22.0](https://play.google.com/store/apps/details?id=de.bytemind.sepia.app.web)
-* SEPIA SDK: [v0.9.21](https://github.com/SEPIA-Framework/sepia-sdk-java)
+* SEPIA SDK: [v0.9.22](https://github.com/SEPIA-Framework/sepia-sdk-java)
 * SEPIA STT Server: [beta v2.1](https://hub.docker.com/r/sepia/stt-server)
 
 ## Wiki, Blog & News
@@ -52,7 +52,7 @@ Basic steps to install the server:
 * Make sure you have Java JDK 8 or 11 installed
 * Download the latest SEPIA-Home bundle from [here](https://github.com/SEPIA-Framework/sepia-installation-and-setup/releases/latest)
 * Extract the zip and run "setup" (.bat for Windows, .sh for Linux/Mac)
-* Start the server (e.g. with the "run-sepia"-script) and continue with "quick-start (for users)" :-)
+* Start the server (e.g. with the "run-sepia"-script) and continue with "Quick-start (for users)" [above](#quick-start-for-makers) :-)
 * Optionally start the SEPIA proxy (e.g. with the "run-reverse-proxy"-script) if you need one 
 * Continue with "Quick-start (for users)" and use 'localhost', your IP or the proxy address (with path /sepia) as hostname :-)
 
