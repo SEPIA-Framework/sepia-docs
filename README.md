@@ -56,8 +56,9 @@ Basic steps to install the server:
 * Optionally start the SEPIA proxy (e.g. with the "run-reverse-proxy"-script) if you need one 
 * Continue with "Quick-start (for users)" and use 'localhost', your IP or the proxy address (with path /sepia) as hostname :-)
 
-More detailed instructions for the installation of the S.E.P.I.A. server stack on Linux, Windows or Mac can be found here:
-https://github.com/SEPIA-Framework/sepia-installation-and-setup
+Instructions and an (almost) automatic installation script for **Raspberry Pi** can be found [-HERE-](https://github.com/SEPIA-Framework/sepia-docs/wiki/Installation#raspberry-pi-installation-via-script)  
+  
+More detailed instructions for the installation of the S.E.P.I.A. server stack on Linux, Windows or Mac can be found [-HERE-](https://github.com/SEPIA-Framework/sepia-installation-and-setup)  
 
 ## Questions and bug-reports
 If you have any questions, need help or want to report a bug please go [here](https://github.com/SEPIA-Framework/sepia-docs/issues).
