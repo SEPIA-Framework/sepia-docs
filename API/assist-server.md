@@ -27,18 +27,18 @@ Javascript Ajax call example config:
 ```
 Javascript Ajax call example config:
 {
-    "url": "http://[assist-server-host]/authentication",
-    "timeout": 5000,
-    "type": "POST",
-    "data": {
+	"url": "http://[assist-server-host]/authentication",
+	"timeout": 5000,
+	"type": "POST",
+	"data": {
 		"action": "validate",
 		"client": "[client]",
 		"GUUID": "uid1007",
 		"PWD": "myClearTextPassword123"
 	},
-    "headers": {
-        "content-type": "application/json"
-    }
+	"headers": {
+		"content-type": "application/json"
+	}
 }
 ```
 
@@ -73,10 +73,10 @@ Example result (reduced):
 ```
 Javascript Ajax call example config:
 {
-    "url": "http://[assist-server-host]/answer",
-    "timeout": 10000,
-    "type": "POST",
-    "data": {
+	"url": "http://[assist-server-host]/answer",
+	"timeout": 10000,
+	"type": "POST",
+	"data": {
 		text: "Hello how are you?",
 		lang: "en",
 		time: 1593104326980,
@@ -86,11 +86,11 @@ Javascript Ajax call example config:
 			prefTempUnit: "C"
 		},
 		"KEY": "[auth-token]",
-        "client": "[client]"
+		"client": "[client]"
 	},
-    "headers": {
-        "content-type": "application/x-www-form-urlencoded"
-    }
+	"headers": {
+		"content-type": "application/x-www-form-urlencoded"
+	}
 }
 ```
 
@@ -104,20 +104,20 @@ Additional state variables are available but not yet documented.
 ```
 Javascript Ajax call example config:
 {
-    "url": "http://[assist-server-host]/remote-action",
-    "timeout": 5000,
-    "type": "POST",
-    "data": {
+	"url": "http://[assist-server-host]/remote-action",
+	"timeout": 5000,
+	"type": "POST",
+	"data": {
 		"action": "{\"key\":\"mic\", \"language\":\"de\"}",
 		"type": "hotkey",
 		"channelId": "",
 		"deviceId": "b1",
 		"KEY": "[auth-token]",
-        "client": "[client]"
+		"client": "[client]"
 	},
-    "headers": {
-        "content-type": "application/x-www-form-urlencoded"
-    }
+	"headers": {
+		"content-type": "application/x-www-form-urlencoded"
+	}
 }
 ```
 
@@ -135,13 +135,13 @@ Javascript Ajax call example config:
 ```
 Javascript Ajax call example config:
 {
-    "url": "http://[assist-server-host]/tts-info",
-    "timeout": 10000,
-    "type": "POST",
-    "data": {},
-    "headers": {
-        "content-type": "application/x-www-form-urlencoded"
-    }
+	"url": "http://[assist-server-host]/tts-info",
+	"timeout": 10000,
+	"type": "POST",
+	"data": {},
+	"headers": {
+		"content-type": "application/x-www-form-urlencoded"
+	}
 }
 ```
 
@@ -150,21 +150,21 @@ Javascript Ajax call example config:
 ```
 Javascript Ajax call example config:
 {
-    "url": "http://[assist-server-host]/tts",
-    "timeout": 10000,
-    "type": "POST",
-    "data": {
+	"url": "http://[assist-server-host]/tts",
+	"timeout": 10000,
+	"type": "POST",
+	"data": {
 		"text": "Hello World",
 		"lang": "en",
 		"voice": "default",
 		"gender": "default",
 		"mood": 5,
-        "KEY": "[auth-token]",
-        "client": "[client]"
-    },
-    "headers": {
-        "content-type": "application/x-www-form-urlencoded"
-    }
+		"KEY": "[auth-token]",
+		"client": "[client]"
+	},
+	"headers": {
+		"content-type": "application/x-www-form-urlencoded"
+	}
 }
 ```
 
