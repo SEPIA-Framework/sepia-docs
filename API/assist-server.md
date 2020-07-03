@@ -110,8 +110,8 @@ Javascript Ajax call example config:
 	"data": {
 		"action": "{\"key\":\"mic\", \"language\":\"de\"}",
 		"type": "hotkey",
-		"channelId": "",
-		"deviceId": "b1",
+		"targetChannelId": "",
+		"targetDeviceId": "b1",
 		"KEY": "[auth-token]",
 		"client": "[client]"
 	},
@@ -121,11 +121,41 @@ Javascript Ajax call example config:
 }
 ```
 
-**Note:** Support depends on specific client app. 'language' action parameter is currently ignored by main client (HTML app v0.22.0). Possible 'key' values are:
+**Note:** Support depends on specific client app. 'language' action parameter is currently ignored by main client (HTML app v0.22.0).  
+Since client v0.22.1 'action' can be either a string or object.  
+Possible 'key' values are:
 * `mic` - triggers microphone
 * `F4` - same as 'mic' but respects app settings for 'useWakeWord'
 * `ao` - triggers always on mode
 * `back`, `next`, `prev` - navigates UI
+
+#### Remote sync (since client v0.22.1)
+
+```
+Javascript Ajax call example config:
+{
+	"url": "http://[assist-server-host]/remote-action",
+	"timeout": 5000,
+	"type": "POST",
+	"data": {
+		"action": {
+			"events": "myView",
+			"forceUpdate": false,
+			"updateLocation": false
+		},
+		"type": "sync",
+		"targetChannelId": "",
+		"targetDeviceId": "b1",
+		"KEY": "[auth-token]",
+		"client": "[client]"
+	},
+	"headers": {
+		"content-type": "application/x-www-form-urlencoded"
+	}
+}
+```
+
+Possible 'events' values are 'myView' (supports 'updateLocation'), 'timer' and 'alarm' (client v0.22.1).
 
 
 ### Text-To-Speech
