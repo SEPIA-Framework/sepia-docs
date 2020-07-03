@@ -198,3 +198,35 @@ Javascript Ajax call example config:
 }
 ```
 
+### SDK
+
+#### Get Custom Services
+
+```
+Javascript Ajax call example config:
+{
+	"url": "http://[assist-server-host]/get-services",
+	"timeout": 15000,
+	"type": "POST",
+	"data": {
+		"KEY": "[auth-token]",
+		"client": "[client]"
+	}
+}
+```
+
+#### Delete Custom Service
+
+```
+Javascript Ajax call example config:
+{
+	"url": "http://[assist-server-host]/delete-service",
+	"timeout": 15000,
+	"type": "POST",
+	"data": {
+		"commands": ["uid1007.corona_data"],
+		"KEY": "[auth-token]",
+		"client": "[client]"
+	}
+}
+```
