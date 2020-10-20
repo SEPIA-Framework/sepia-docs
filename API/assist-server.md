@@ -99,6 +99,9 @@ Additional state variables are available but not yet documented.
 
 ### Remote Actions
 
+**Note:** Support depends on specific client app. 'language' action parameter is currently ignored by main client (HTML app v0.22.0).  
+Since client v0.22.1 'action' can be either a string or object.
+
 #### Remote trigger
 
 ```
@@ -121,14 +124,19 @@ Javascript Ajax call example config:
 }
 ```
 
-**Note:** Support depends on specific client app. 'language' action parameter is currently ignored by main client (HTML app v0.22.0).  
-Since client v0.22.1 'action' can be either a string or object.  
-Possible 'key' values are:
+Possible 'key' (action.key) values for type 'hotkey' (data.type) are for example:
 * `mic` - triggers microphone
 * `F4` - same as 'mic' but respects app settings for 'useWakeWord'
 * `ao` - triggers always on mode
 * `back`, `next`, `prev` - navigates UI
-
+* `connect`, `disconnect` - control connection to main WebSocket server (not CLEXI)
+* `wakeWordOn`, `wakeWordOff` - switch wake-word on/off
+* `reload` or `F5` - reload client
+  
+Possible values (action) for type 'media' (data.type) are for example:
+* `action.type = 'audio_stream'`, `action.streamURL = '[stream-URL]'`
+* `action.type = 'control'`, `action.controlAction = '[stop/pause/resume/next/prev...]'`
+  
 #### Remote sync (since client v0.22.1)
 
 ```
@@ -140,10 +148,40 @@ Javascript Ajax call example config:
 	"data": {
 		"action": {
 			"events": "myView",
+			"details": {},
 			"forceUpdate": false,
 			"updateLocation": false
 		},
 		"type": "sync",
+		"targetChannelId": "<auto>",
+		"targetDeviceId": "<all>",
+		"skipDeviceId": "b1",
+		"KEY": "[auth-token]",
+		"client": "[client]"
+	},
+	"headers": {
+		"content-type": "application/x-www-form-urlencoded"
+	}
+}
+```
+
+Possible 'events' values are 'myView' (supports 'updateLocation'), 'timeEvents', 'timer' and 'alarm' (client v0.22.1).
+
+#### Remote Audio
+
+```
+Javascript Ajax call example config:
+{
+	"url": "http://[assist-server-host]/remote-action",
+	"timeout": 5000,
+	"type": "POST",
+	"data": {
+		"action": "{
+			"type": "audio_stream",
+			"streamURL": "https://example.com/my-stream",
+			"name": "My Stream"
+		}",
+		"type": "media",
 		"targetChannelId": "",
 		"targetDeviceId": "b1",
 		"KEY": "[auth-token]",
@@ -155,8 +193,7 @@ Javascript Ajax call example config:
 }
 ```
 
-Possible 'events' values are 'myView' (supports 'updateLocation'), 'timer' and 'alarm' (client v0.22.1).
-
+Possible 'action.type' values are 'audio_stream' (supports 'streamURL') and 'control' (supports all media control events like 'stop', 'next', 'resume', etc.) (client v0.22.1).
 
 ### Text-To-Speech
 
@@ -215,6 +252,22 @@ Javascript Ajax call example config:
 }
 ```
 
+#### Get Custom Service Source Code
+
+```
+Javascript Ajax call example config:
+{
+	"url": "http://[assist-server-host]/get-service-source",
+	"timeout": 15000,
+	"type": "POST",
+	"data": {
+		"service": "CoronaDataEcdc",
+		"KEY": "[auth-token]",
+		"client": "[client]"
+	}
+}
+```
+
 #### Delete Custom Service
 
 ```
@@ -225,6 +278,7 @@ Javascript Ajax call example config:
 	"type": "POST",
 	"data": {
 		"commands": ["uid1007.corona_data"],
+		"services": ["CoronaDataEcdc"],
 		"KEY": "[auth-token]",
 		"client": "[client]"
 	}
