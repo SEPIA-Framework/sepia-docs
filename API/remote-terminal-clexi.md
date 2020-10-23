@@ -14,9 +14,9 @@ General variables:
 ```
 Javascript Ajax call example config:
 {
-    "url": "http://[clexi-server-host]/ping",
-    "timeout": 5000,
-    "type": "GET"
+	"url": "http://[clexi-server-host]/ping",
+	"timeout": 5000,
+	"type": "GET"
 }
 ```
 
@@ -30,12 +30,12 @@ Its very similar to the 'remote-action' endpoint of the Assist-Server, but requi
 ```
 Javascript Ajax call example config:
 {
-    "url": "http://[clexi-server-host]/event/remote-button?deviceId=o1&button=mic",
-    "timeout": 5000,
-    "type": "GET",
-    "headers": {
+	"url": "http://[clexi-server-host]/event/remote-button?deviceId=o1&button=mic",
+	"timeout": 5000,
+	"type": "GET",
+	"headers": {
 		"clexi-id": "[clexi-id]"
-    }
+	}
 }
 ```
 
