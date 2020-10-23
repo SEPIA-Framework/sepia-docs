@@ -1,7 +1,7 @@
 # Assist-Server API
 
 General variables:
-* [assist-server-host] - URL of SEPIA Assist-Server, e.g. `localhost:20721`
+* [assist-server-host] - URL of SEPIA Assist-Server, e.g. `localhost:20721` or `192.168.0.1:20726/sepia/assist`
 * [auth-token] - 'userId;loginToken' combination to authenticate API communication and user
 * [client] - A string that contains info about the client type and device id, e.g. 'b1_chrome_browser_v0.22.0'
 
