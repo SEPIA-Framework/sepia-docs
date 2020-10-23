@@ -1,7 +1,7 @@
 # Teach-Server API
 
 General variables:
-* [teach-server-host] - URL of SEPIA Teach-Server, e.g. `localhost:20722`
+* [teach-server-host] - URL of SEPIA Teach-Server, e.g. `localhost:20722` or `192.168.0.1:20726/sepia/teach`
 * [auth-token] - 'userId;loginToken' combination to authenticate API communication and user
 
 ## Example calls

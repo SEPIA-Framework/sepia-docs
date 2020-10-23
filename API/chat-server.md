@@ -1,7 +1,7 @@
 # Chat-Server API
 
 General variables:
-* [chat-server-host] - URL of SEPIA Chat-Server (aka WebSocket server), e.g. `localhost:20723`
+* [chat-server-host] - URL of SEPIA Chat-Server (aka WebSocket server), e.g. `localhost:20723` or `192.168.0.1:20726/sepia/chat`
 * [auth-token] - 'userId;loginToken' combination to authenticate API communication and user
 * [client] - A string that contains info about the client type and device id, e.g. 'b1_chrome_browser_v0.22.0'
 
