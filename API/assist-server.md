@@ -258,6 +258,8 @@ curl -X POST \
 }'
 ```
 
+TODO: Add possible values for `indexType` and `section`.
+
 ### Text-To-Speech
 
 #### Get TTS Info
