@@ -178,11 +178,11 @@ Javascript Ajax call example config:
 	"timeout": 5000,
 	"type": "POST",
 	"data": {
-		"action": "{
+		"action": {
 			"type": "audio_stream",
 			"streamURL": "https://example.com/my-stream",
 			"name": "My Stream"
-		}",
+		},
 		"type": "media",
 		"targetChannelId": "",
 		"targetDeviceId": "b1",
@@ -195,7 +195,36 @@ Javascript Ajax call example config:
 }
 ```
 
-Possible 'action.type' values are 'audio_stream' (supports 'streamURL') and 'control' (supports all media control events like 'stop', 'next', 'resume', etc.) (client v0.22.1).
+Possible 'action.type' values are 'audio_stream' (supports 'streamURL'), 'embedded_player' (requires card-data) and 'control' (supports all media control events like 'stop', 'next', 'resume', etc.) (client v0.22.1).
+
+#### Remote Notification/Broadcast
+
+```
+Javascript Ajax call example config:
+{
+	"url": "http://[assist-server-host]/remote-action",
+	"timeout": 5000,
+	"type": "POST",
+	"data": {
+		"action": {
+			"type": "assistant_message",
+			"text": "Dinner is ready",
+			"language": "en",
+			"skipIntro": false
+		},
+		"type": "notify",
+		"targetChannelId": "",
+		"targetDeviceId": "b1",
+		"KEY": "[auth-token]",
+		"client": "[client]"
+	},
+	"headers": {
+		"content-type": "application/x-www-form-urlencoded"
+	}
+}
+```
+
+Possible 'action.type' values: Only 'assistant_message' at the moment (client v0.24.0).
 
 ### User-Data
 
