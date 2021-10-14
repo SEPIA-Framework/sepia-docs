@@ -53,7 +53,7 @@ Basic steps to install the server:
 * Download the latest SEPIA-Home bundle from [here](https://github.com/SEPIA-Framework/sepia-installation-and-setup/releases/latest)
 * Extract the zip and run "setup" (.bat for Windows, .sh for Linux/Mac)
 * Start the server (e.g. with the "run-sepia"-script) and continue with "Quick-start (for users)" [above](#quick-start-for-users) :-)
-* Optionally start the SEPIA proxy (e.g. with the "run-reverse-proxy"-script) if you need one 
+* Optional: If you need a reverse-proxy install Nginx and use the included SEPIA configuration
 * Continue with "Quick-start (for users)" and use 'localhost', your IP or the proxy address (with path /sepia) as hostname :-)
 
 Instructions and an (almost) automatic installation script for **Raspberry Pi** can be found [-HERE-](https://github.com/SEPIA-Framework/sepia-docs/wiki/Installation#raspberry-pi-installation-via-script)  
