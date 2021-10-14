@@ -4,6 +4,8 @@ General variables:
 * [assist-server-host] - URL of SEPIA Assist-Server, e.g. `localhost:20721` or `192.168.0.1:20726/sepia/assist`
 * [auth-token] - 'userId;loginToken' combination to authenticate API communication and user
 * [client] - A string that contains info about the client type and device id, e.g. 'b1_chrome_browser_v0.22.0'
+* [device-id] - Device id part of 'client', e.g. 'b1'
+* [user-id] - User id of caller, e.g. 'uid1007'
 
 ## Example calls
 
@@ -176,11 +178,11 @@ Javascript Ajax call example config:
 	"timeout": 5000,
 	"type": "POST",
 	"data": {
-		"action": "{
+		"action": {
 			"type": "audio_stream",
 			"streamURL": "https://example.com/my-stream",
 			"name": "My Stream"
-		}",
+		},
 		"type": "media",
 		"targetChannelId": "",
 		"targetDeviceId": "b1",
@@ -193,7 +195,99 @@ Javascript Ajax call example config:
 }
 ```
 
-Possible 'action.type' values are 'audio_stream' (supports 'streamURL') and 'control' (supports all media control events like 'stop', 'next', 'resume', etc.) (client v0.22.1).
+Possible 'action.type' values are 'audio_stream' (supports 'streamURL'), 'embedded_player' (requires card-data) and 'control' (supports all media control events like 'stop', 'next', 'resume', etc.) (client v0.22.1).
+
+#### Remote Notification/Broadcast
+
+```
+Javascript Ajax call example config:
+{
+	"url": "http://[assist-server-host]/remote-action",
+	"timeout": 5000,
+	"type": "POST",
+	"data": {
+		"action": {
+			"type": "assistant_message",
+			"text": "Dinner is ready",
+			"language": "en",
+			"skipIntro": false
+		},
+		"type": "notify",
+		"targetChannelId": "",
+		"targetDeviceId": "b1",
+		"KEY": "[auth-token]",
+		"client": "[client]"
+	},
+	"headers": {
+		"content-type": "application/x-www-form-urlencoded"
+	}
+}
+```
+
+Possible 'action.type' values: Only 'assistant_message' at the moment (client v0.24.0).
+
+### User-Data
+
+#### Create To-Do user-data list
+
+```
+cURL example call:
+
+curl -X POST \
+  http://[assist-server-host]/userdata \
+  -H 'Content-Type: application/json' \
+  -d '{
+	"KEY": "[auth-token]",
+	"client": "[client]",
+	"device_id": "[device-id]",
+	"set": {
+		"lists": [{
+			"group": "todo",
+			"indexType": "todo",
+			"section": "productivity",
+			"title": "Test Liste",
+			"type": "userDataList",
+			"user": "[user-id]",
+			"data": [{
+				"checked": false,
+				"dateAdded": 1605889595926,
+				"eleType": "checkable",
+				"itemId": "item-1605889595926-101",
+				"lastChange": 1605889595926,
+				"name": "test item 1",
+				"priority": 0,
+				"state": "open"
+			}]
+		}]	
+	}
+}'
+```
+
+NOTE: The `"data": [{...}]` block is an example for to-do list items. Make sure to set proper timestamps ("dateAdded", "lastChange") and an "itemId" that is unique inside this list.  
+If you want to overwrite an existing list you can use the same call just add the list ID as `"_id": "AXXmq...", ` to `"lists": [{...`.
+
+#### Read alarms from user-data
+
+```
+cURL example call:
+
+curl -X POST \
+  http://[assist-server-host]/userdata \
+  -H 'Content-Type: application/json' \
+  -d '{
+	"KEY": "[auth-token]",
+	"client": "[client]",
+	"device_id": "[device-id]",
+	"get": {
+		"lists": [{
+			"section": "timeEvents",
+			"indexType": "alarms"
+		}]
+	}
+}'
+```
+
+TODO: Add possible values for `indexType` and `section`.
 
 ### Text-To-Speech
 
