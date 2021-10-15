@@ -9,10 +9,11 @@ Overview of SEPIA ecosystem (note: some parts are still in the dev branches).
 For image icon attributions please check the [homepage](https://sepia-framework.github.io/#attributions)
 
 ## Downloads
-* SEPIA-Home (Server, Web-App + Apk, Tools): [v2.5.1](https://github.com/SEPIA-Framework/sepia-installation-and-setup/releases)
-* Android Play Store: [v0.23.1](https://play.google.com/store/apps/details?id=de.bytemind.sepia.app.web)
-* SEPIA SDK: [v0.9.23](https://github.com/SEPIA-Framework/sepia-sdk-java)
-* SEPIA STT Server: [beta v2.1](https://hub.docker.com/r/sepia/stt-server)
+* SEPIA-Home (Server, Web-App + Apk, Tools): [v2.6.0](https://github.com/SEPIA-Framework/sepia-installation-and-setup/releases)
+* SEPIA Client - Android Play Store: [v0.23.1](https://play.google.com/store/apps/details?id=de.bytemind.sepia.app.web)
+* SEPIA Client - DIY (Raspberry Pi etc.): [Instructions](https://github.com/SEPIA-Framework/sepia-installation-and-setup/tree/master/sepia-client-installation)
+* SEPIA STT Server: [v0.9.5](https://github.com/SEPIA-Framework/sepia-stt-server) ([Docker Hub](https://hub.docker.com/r/sepia/stt-server))
+* SEPIA SDK: [v0.9.24](https://github.com/SEPIA-Framework/sepia-sdk-java)
 
 ## Wiki, Blog & News
 Checkout the wiki for detailed descriptions:
@@ -23,20 +24,24 @@ Visit the blog for summaries and guides:
 [S.E.P.I.A. Blog](https://medium.com/sepia-framework)
 
 ## Intro
-**S.E.P.I.A. stands for server-based, extendable, personal, intelligent assistant** and is a modular framework for voice-assistants on the one hand and a ready-for-action digital assistant app that works cross-platform on browser, iOS and Android on the other hand. The server is based on Java and can be operated on Windows, Linux and Mac. Due to it's lightweight architecture it even runs smooth and easy on a Raspberry Pi :relieved: :robot:  
+**S.E.P.I.A. stands for self-hosted, extendable, personal, intelligent assistant** and is on the one hand a modular framework for voice-assistants and on the other hand a ready-for-action digital assistant app that works cross-platform on browser, iOS and Android. The server is based on Java and can be operated on Windows, Linux and Mac. Due to it's lightweight architecture it even runs smooth and easy on a Raspberry Pi :relieved: :robot:  
 SEPIA already has smart-services for: **news, music (radio), timers, alarms, reminders, to-do and shopping lists, navigation, places, weather, Bundesliga soccer-results, Wikipedia, web-search, smart home (e.g. using open-source tools like [openHAB](https://www.openhab.org)), a bit of small-talk and more**. If you want to realize your own ideas and build a service yourself you can do that via the [SEPIA SDK](https://github.com/SEPIA-Framework/sepia-sdk-java) or using the code editor integrated into the [SEPIA Control HUB](https://github.com/SEPIA-Framework/sepia-admin-tools/tree/master/admin-web-tools)!
 
 ### Architecture
-The SEPIA Framework basically consists of 2 major parts: The [SEPIA Client](https://github.com/SEPIA-Framework/sepia-html-client-app) and the [Assist-Server](https://github.com/SEPIA-Framework/sepia-assist-server).  
+The SEPIA Framework consists of 2 core parts: The [SEPIA Client](https://github.com/SEPIA-Framework/sepia-html-client-app) and the [Assist-Server](https://github.com/SEPIA-Framework/sepia-assist-server).  
   
-**SEPIA Client:** The user interface that takes care of the speech-recognition to transform voice into text, sending that text to a SEPIA server for interpretation and presenting the (JSON) result to the user via text, graphical elements and/or sound (text-to-speech). It can even listen to wake-words like **Hey SEPIA**. There are clients for the browser, Android, iOS and a [DIY version](https://github.com/SEPIA-Framework/sepia-installation-and-setup/tree/master/sepia-client-installation) that even works "headless" for example on a Raspberry Pi.
-
+**SEPIA Client:** The user interface that handles voice, text or touch interactions and manages the "dialog" with the SEPIA server. Server responses can be presented as text (chat), graphical elements (cards, buttons) and/or sound including speech synthesis (text-to-speech) and music (media-player). The client usually takes care of the speech-recognition (on-device or via SEPIA STT server) to transform voice into text and can even listen to wake-words like **Hey SEPIA** (thanks to Porcupine by Picovoice). There are clients for the browser, Android, iOS and a [DIY version](https://github.com/SEPIA-Framework/sepia-installation-and-setup/tree/master/sepia-client-installation) that even works "headless" for example on a Raspberry Pi.  
+  
 **Assist-Server:** The "brain" of SEPIA that receives requests from the client via the HTTP REST API and takes care of the natural-language-understanding (intent and NER), conversation flow, smart-service integration (like a to-do list or news service), user-accounts, Text-to-Speech (TTS) and more. The Assist-Server can run on it's own hardware for example on SBCs like a Raspberry Pi 3 or parallel to the client on more powerful systems (RPi4, desktop PC ect.).  
   
-Other notable components of the SEPIA Framework are the [Control HUB](https://github.com/SEPIA-Framework/sepia-admin-tools) to manage server, "headless" clients, Smart Home and more, the [WebSocket server](https://github.com/SEPIA-Framework/sepia-websocket-server-java) for multi-channel chats and duplex data transfer, the [Teach-Server](https://github.com/SEPIA-Framework/sepia-teach-server) to store custom commands, a [Speech-To-Text (STT) server](https://github.com/SEPIA-Framework/sepia-stt-server) that supports Kaldi open-source ASR (thanks to [Zamia speech](https://github.com/gooofy/zamia-speech)) and a stand-alone [wake-word tool](https://github.com/SEPIA-Framework/sepia-wakeword-tools) that even works on a Raspberry Pi Zero :relaxed: (thanks to Porcupine by Picovoice).  
+Because speech-recognition is a very delicate topic for multiple reasons (privacy, accuracy, performance, control etc.) the SEPIA Framework includes another major component: The [Speech-To-Text (STT) server](https://github.com/SEPIA-Framework/sepia-stt-server).  
+  
+**SEPIA STT Server:** An open-source server for real-time speech-recognition that runs on most systems (x86, ARM), including Raspberry Pi and supports custom, dynamic ASR models (thanks to great tools like Kaldi, [Vosk](https://github.com/alphacep/vosk-api) or [Zamia speech](https://github.com/gooofy/zamia-speech)).  
+  
+Other notable components of the SEPIA Framework are the [Control HUB](https://github.com/SEPIA-Framework/sepia-admin-tools) to manage server, "headless" clients, Smart Home and more, the [WebSocket server](https://github.com/SEPIA-Framework/sepia-websocket-server-java) for multi-channel chats and duplex data transfer, the [Teach-Server](https://github.com/SEPIA-Framework/sepia-teach-server) to store custom commands and a [Java SDK](https://github.com/SEPIA-Framework/sepia-sdk-java) to create powerful custom services.  
 
 ## Languages
-Currently SEPIA works in German and English with basic support (inside the client) to create custom commands in other common languages. Some services like news and soccer-results are optimized for German meaning you will get an answer in English but might see a mix of English and German news outlets or soccer results for the Bundesliga. The smart-services are constantly improving though and you can easily edit the list of outlets.
+Currently SEPIA works in German and English with basic support to create custom commands in other common languages. Some services like news and soccer-results are optimized for German meaning you will get an answer in English but might see a mix of English and German news outlets or soccer results for the Bundesliga. The smart-services are constantly improving though and you can easily edit the list of outlets.
 
 ## Quick-start (for users)
 To use S.E.P.I.A. your personal, digital, open-source voice assistant you need 2 things:
