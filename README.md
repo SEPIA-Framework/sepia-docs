@@ -10,9 +10,9 @@ For image icon attributions please check the [homepage](https://sepia-framework.
 
 ## Downloads
 * SEPIA-Home (Server, Web-App + Apk, Tools): [v2.6.0](https://github.com/SEPIA-Framework/sepia-installation-and-setup/releases)
-* SEPIA Client - Android Play Store: [v0.24.0](https://play.google.com/store/apps/details?id=de.bytemind.sepia.app.web)
+* SEPIA Client - Android: [v0.24.0 Apk](https://github.com/SEPIA-Framework/sepia-installation-and-setup/releases/download/v2.6.0/SEPIA-Android-Client.apk) - [Play Store](https://play.google.com/store/apps/details?id=de.bytemind.sepia.app.web)
 * SEPIA Client - DIY (Raspberry Pi etc.): [Instructions](https://github.com/SEPIA-Framework/sepia-installation-and-setup/tree/master/sepia-client-installation)
-* SEPIA STT Server: [v0.9.5](https://github.com/SEPIA-Framework/sepia-stt-server) ([Docker Hub](https://hub.docker.com/r/sepia/stt-server))
+* SEPIA STT Server: [v0.9.5](https://github.com/SEPIA-Framework/sepia-stt-server) - [Docker Hub](https://hub.docker.com/r/sepia/stt-server)
 * SEPIA SDK: [v0.9.24](https://github.com/SEPIA-Framework/sepia-sdk-java)
 
 ## Wiki, Blog & News
@@ -24,8 +24,8 @@ Visit the blog for summaries and guides:
 [S.E.P.I.A. Blog](https://medium.com/sepia-framework)
 
 ## Intro
-**S.E.P.I.A. stands for self-hosted, extendable, personal, intelligent assistant**. On the one hand it is a modular framework for voice-assistants and on the other hand it is a ready-for-action digital assistant app that works cross-platform on browser, iOS and Android. The server is based on Java and can be operated on Windows, Linux and Mac. Due to it's lightweight architecture it even runs smooth and easy on a Raspberry Pi :relieved: :robot:  
-SEPIA already has smart-services for: **news, music (radio), timers, alarms, reminders, to-do and shopping lists, navigation, places, weather, Bundesliga soccer-results, Wikipedia, web-search, smart home (e.g. using open-source tools like [openHAB](https://www.openhab.org)), a bit of small-talk and more**. If you want to realize your own ideas and build a service yourself you can do that via the [SEPIA SDK](https://github.com/SEPIA-Framework/sepia-sdk-java) or using the code editor integrated into the [SEPIA Control HUB](https://github.com/SEPIA-Framework/sepia-admin-tools/tree/master/admin-web-tools)!
+**S.E.P.I.A. is an acronym that stands for: self-hosted, extendable, personal, intelligent assistant**. It is a modular framework for voice-assistants equipped with all the required features and services to build a full-fledged digital assistant app, smart-speaker, smart-display or whatever you come up with :smiley:. It works out-of-the-box and has cross-platform support for browser, iOS and Android. The server is based on Java and can be operated on Windows, Linux and Mac. Due to it's lightweight architecture it even runs smoothly on a Raspberry Pi :relieved: :robot:.  
+SEPIA currently has smart-services for: **news, music (radio), timers, alarms, reminders, to-do and shopping lists, smart home (e.g. using open-source tools like [openHAB](https://www.openhab.org)), navigation, places, weather, Wikipedia, web-search, Bundesliga soccer-results, a bit of small-talk and more**. To realize your own ideas you can use tools like the [SEPIA SDK](https://github.com/SEPIA-Framework/sepia-sdk-java) and the code editor integrated into the [SEPIA Control HUB](https://github.com/SEPIA-Framework/sepia-admin-tools/tree/master/admin-web-tools) to build services or write [custom HTML widgets](https://github.com/SEPIA-Framework/sepia-extensions) :man_mechanic::woman_scientist:!
 
 ### Architecture
 The SEPIA Framework consists of 2 core parts: The SEPIA Client and the Assist-Server.  
