@@ -10,9 +10,9 @@ For image icon attributions please check the [homepage](https://sepia-framework.
 
 ## Downloads
 * SEPIA-Home (Server, Web-App + Apk, Tools): [v2.6.0](https://github.com/SEPIA-Framework/sepia-installation-and-setup/releases)
-* SEPIA Client - Android: [v0.24.0 Apk](https://github.com/SEPIA-Framework/sepia-installation-and-setup/releases/download/v2.6.0/SEPIA-Android-Client.apk) - [Play Store](https://play.google.com/store/apps/details?id=de.bytemind.sepia.app.web)
+* SEPIA Client - Android: [v0.24.0 Apk](https://github.com/SEPIA-Framework/sepia-installation-and-setup/releases/download/v2.6.0/SEPIA-Android-Client.apk) | [Play Store](https://play.google.com/store/apps/details?id=de.bytemind.sepia.app.web)
 * SEPIA Client - DIY (Raspberry Pi etc.): [Instructions](https://github.com/SEPIA-Framework/sepia-installation-and-setup/tree/master/sepia-client-installation)
-* SEPIA STT Server: [v0.9.5](https://github.com/SEPIA-Framework/sepia-stt-server) - [Docker Hub](https://hub.docker.com/r/sepia/stt-server)
+* SEPIA STT Server: [v0.9.5](https://github.com/SEPIA-Framework/sepia-stt-server) | [Docker Hub](https://hub.docker.com/r/sepia/stt-server)
 * SEPIA SDK: [v0.9.24](https://github.com/SEPIA-Framework/sepia-sdk-java)
 
 ## Wiki, Blog & News
@@ -57,19 +57,19 @@ Basic steps to install the server:
 * Make sure you have Java JDK 8 or 11 installed
 * Download the latest SEPIA-Home bundle from [here](https://github.com/SEPIA-Framework/sepia-installation-and-setup/releases/latest)
 * Extract the zip and run "setup" (.bat for Windows, .sh for Linux/Mac)
+* Optional (advanced users): If you need a reverse-proxy install Nginx and use the included SEPIA configuration
 * Start the server (e.g. with the "run-sepia"-script) and continue with "Quick-start (for users)" [above](#quick-start-for-users) :-)
-* Optional: If you need a reverse-proxy install Nginx and use the included SEPIA configuration
-* Continue with "Quick-start (for users)" and use 'localhost', your IP or the proxy address (with path /sepia) as hostname :-)
+* Use 'localhost', your IP or the proxy address (with path /sepia) as hostname :-)
 
 Instructions and an (almost) automatic installation script for **Raspberry Pi** can be found [-HERE-](https://github.com/SEPIA-Framework/sepia-docs/wiki/Installation#raspberry-pi-installation-via-script)  
   
 Instructions for the installation of the S.E.P.I.A. server stack on **Linux, Windows or Mac** can be found [-HERE-](https://github.com/SEPIA-Framework/sepia-installation-and-setup)  
 
 ## Questions and bug-reports
-If you have any questions, need help or want to report a bug please go [here](https://github.com/SEPIA-Framework/sepia-docs/issues).
+If you have any questions, need help or want to report a bug please go [here](https://github.com/SEPIA-Framework/sepia-docs/issues) or start a [discussion here](https://github.com/SEPIA-Framework/sepia-docs/discussions).
 
 ## API keys for services
 Some services integrated in SEPIA require an API key to run properly (e.g. navigation/reverse geo-coding). Find out how to get them (for free) [here](../../wiki/API-keys).
 
 ## Final notes
-If you run your own server and decide to open it to the public or to your friends please make sure to inform them about your data privacy policy since you are operating a database with user-accounts.
+If you run your own server and decide to open it to the public or to your friends please make sure it is properly secured and inform the users about your data privacy policy since you are operating a database with potentially sensitive, personal information.
