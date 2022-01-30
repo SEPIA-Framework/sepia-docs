@@ -5,7 +5,7 @@ General variables:
 * [auth-token] - 'userId;loginToken' combination to authenticate API communication and user
 * [client] - A string that contains info about the client type and device id, e.g. 'b1_chrome_browser_v0.22.0'
 * [device-id] - Device id part of 'client', e.g. 'b1'
-* [user-id] - User id of caller, e.g. 'uid1007'
+* [user-id] - User id of caller or receiver, e.g. 'uid1007'
 
 ## Example calls
 
@@ -118,7 +118,8 @@ Javascript Ajax call example config:
 		"targetChannelId": "",
 		"targetDeviceId": "b1",
 		"KEY": "[auth-token]",
-		"client": "[client]"
+		"client": "[client]",
+		"receiver": "[user-id]"
 	},
 	"headers": {
 		"content-type": "application/x-www-form-urlencoded"
@@ -126,6 +127,8 @@ Javascript Ajax call example config:
 }
 ```
 
+Note: Remote actions support the `receiver` field that can be different from sender but the receiving user has to explicitly allow access (client settings).  
+  
 Possible 'key' (action.key) values for type 'hotkey' (data.type) are for example:
 * `mic` - triggers microphone
 * `F4` - same as 'mic' but respects app settings for 'useWakeWord'
@@ -264,7 +267,32 @@ curl -X POST \
 ```
 
 NOTE: The `"data": [{...}]` block is an example for to-do list items. Make sure to set proper timestamps ("dateAdded", "lastChange") and an "itemId" that is unique inside this list.  
-If you want to overwrite an existing list you can use the same call just add the list ID as `"_id": "AXXmq...", ` to `"lists": [{...`.
+If you want to **overwrite** an existing list you can use the same call just **add the list ID** as `"_id": "AXXmq...", ` to `"lists": [{...`.
+
+#### Delete To-Do user-data list
+
+The `/userdata` enpoint has 3 "actions": `"get"`, `"set"` and `"delete"`. To delete a list you have to know it's `"_id"` similar to the overwrite 'set' request.
+
+```
+cURL example call:
+
+curl -X POST \
+  http://[assist-server-host]/userdata \
+  -H 'Content-Type: application/json' \
+  -d '{
+	"KEY": "[auth-token]",
+	"client": "[client]",
+	"device_id": "[device-id]",
+	"delete": {
+		"lists": [{
+			"indexType": "todo",
+			"section": "productivity",
+			"_id": "AX6r-MTV5aBxLA0pMMm",
+			"title": "test"
+		}]
+	}
+}
+```
 
 #### Read alarms from user-data
 
@@ -299,7 +327,10 @@ Javascript Ajax call example config:
 	"url": "http://[assist-server-host]/tts-info",
 	"timeout": 10000,
 	"type": "POST",
-	"data": {},
+	"data": {
+		"KEY": "[auth-token]",
+		"client": "[client]"
+	},
 	"headers": {
 		"content-type": "application/x-www-form-urlencoded"
 	}
