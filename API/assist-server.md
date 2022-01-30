@@ -267,7 +267,32 @@ curl -X POST \
 ```
 
 NOTE: The `"data": [{...}]` block is an example for to-do list items. Make sure to set proper timestamps ("dateAdded", "lastChange") and an "itemId" that is unique inside this list.  
-If you want to overwrite an existing list you can use the same call just add the list ID as `"_id": "AXXmq...", ` to `"lists": [{...`.
+If you want to **overwrite** an existing list you can use the same call just **add the list ID** as `"_id": "AXXmq...", ` to `"lists": [{...`.
+
+#### Delete To-Do user-data list
+
+The `/userdata` enpoint has 3 "actions": `"get"`, `"set"` and `"delete"`. To delete a list you have to know it's `"_id"` similar to the overwrite 'set' request.
+
+```
+cURL example call:
+
+curl -X POST \
+  http://[assist-server-host]/userdata \
+  -H 'Content-Type: application/json' \
+  -d '{
+	"KEY": "[auth-token]",
+	"client": "[client]",
+	"device_id": "[device-id]",
+	"delete": {
+		"lists": [{
+			"indexType": "todo",
+			"section": "productivity",
+			"_id": "AX6r-MTV5aBxLA0pMMm",
+			"title": "test"
+		}]
+	}
+}
+```
 
 #### Read alarms from user-data
 
