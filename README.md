@@ -9,11 +9,11 @@ Overview of SEPIA ecosystem (note: some parts are still in the dev branches).
 For image icon attributions please check the [homepage](https://sepia-framework.github.io/#attributions)
 
 ## Downloads
-* SEPIA-Home (Server, Web-App + Apk, Tools): [v2.6.1](https://github.com/SEPIA-Framework/sepia-installation-and-setup/releases)
-* SEPIA Client - Android: [v0.24.1 Apk](https://github.com/SEPIA-Framework/sepia-installation-and-setup/releases/download/v2.6.1/SEPIA-Android-Client.apk) | [Play Store](https://play.google.com/store/apps/details?id=de.bytemind.sepia.app.web)
+* SEPIA-Home (Server, Web-App + Apk, Tools): [v2.6.2](https://github.com/SEPIA-Framework/sepia-installation-and-setup/releases)
+* SEPIA Client - Android: [v0.24.2 Apk](https://github.com/SEPIA-Framework/sepia-installation-and-setup/releases/download/v2.6.2/SEPIA-Android-Client.apk) | [Play Store](https://play.google.com/store/apps/details?id=de.bytemind.sepia.app.web)
 * SEPIA Client - DIY (Raspberry Pi etc.): [Instructions](https://github.com/SEPIA-Framework/sepia-installation-and-setup/tree/master/sepia-client-installation)
 * SEPIA STT Server: [v0.9.5](https://github.com/SEPIA-Framework/sepia-stt-server) | [Docker Hub](https://hub.docker.com/r/sepia/stt-server)
-* SEPIA SDK: [v0.9.25](https://github.com/SEPIA-Framework/sepia-sdk-java)
+* SEPIA SDK: [v0.9.26](https://github.com/SEPIA-Framework/sepia-sdk-java)
 
 ## Wiki, Blog & News
 Checkout the wiki for detailed descriptions:
