@@ -9,11 +9,11 @@ Overview of SEPIA ecosystem (note: some parts are still in the dev branches).
 For image icon attributions please check the [homepage](https://sepia-framework.github.io/#attributions)
 
 ## Downloads
-* SEPIA-Home (Server, Web-App + Apk, Tools): [v2.6.1](https://github.com/SEPIA-Framework/sepia-installation-and-setup/releases)
-* SEPIA Client - Android: [v0.24.1 Apk](https://github.com/SEPIA-Framework/sepia-installation-and-setup/releases/download/v2.6.1/SEPIA-Android-Client.apk) | [Play Store](https://play.google.com/store/apps/details?id=de.bytemind.sepia.app.web)
+* SEPIA-Home (Server, Web-App + Apk, Tools): [v2.7.0](https://github.com/SEPIA-Framework/sepia-installation-and-setup/releases)
+* SEPIA Client - Android: [v0.25.0 Apk](https://github.com/SEPIA-Framework/sepia-installation-and-setup/releases/download/v2.7.0/SEPIA-Android-Client.apk) | [Play Store](https://play.google.com/store/apps/details?id=de.bytemind.sepia.app.web)
 * SEPIA Client - DIY (Raspberry Pi etc.): [Instructions](https://github.com/SEPIA-Framework/sepia-installation-and-setup/tree/master/sepia-client-installation)
-* SEPIA STT Server: [v0.9.5](https://github.com/SEPIA-Framework/sepia-stt-server) | [Docker Hub](https://hub.docker.com/r/sepia/stt-server)
-* SEPIA SDK: [v0.9.25](https://github.com/SEPIA-Framework/sepia-sdk-java)
+* SEPIA STT Server: [v1.0.0](https://github.com/SEPIA-Framework/sepia-stt-server) | [Docker Hub](https://hub.docker.com/r/sepia/stt-server)
+* SEPIA SDK: [v0.10.0](https://github.com/SEPIA-Framework/sepia-sdk-java)
 
 ## Wiki, Blog & News
 Checkout the wiki for detailed descriptions:
@@ -60,8 +60,9 @@ Basic steps to install the server:
 * Download the latest SEPIA-Home bundle from [here](https://github.com/SEPIA-Framework/sepia-installation-and-setup/releases/latest)
 * Extract the zip and run "setup" (.bat for Windows, .sh for Linux/Mac)
 * Optional (advanced users): If you need a reverse-proxy install Nginx and use the included SEPIA configuration
-* Start the server (e.g. with the "run-sepia"-script) and continue with "Quick-start (for users)" [above](#quick-start-for-users) :-)
-* Use 'localhost', your IP or the proxy address (with path /sepia) as hostname :-)
+* Start the server with one of the "run-sepia"-scripts and check out the links mentioned at the end of the process
+* Use any web browser to open the SEPIA Control-HUB (the 'tools' link) and [create a new user](https://github.com/SEPIA-Framework/sepia-docs/wiki/Create-and-Edit-Users)
+* Continue with "Quick-start (for users)" [above](#quick-start-for-users) :-)
 
 Instructions and an (almost) automatic installation script for **Raspberry Pi** can be found [-HERE-](https://github.com/SEPIA-Framework/sepia-docs/wiki/Installation#raspberry-pi-installation-via-script)  
   
