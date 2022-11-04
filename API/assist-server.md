@@ -291,7 +291,7 @@ curl -X POST \
 			"title": "test"
 		}]
 	}
-}
+}'
 ```
 
 #### Read alarms from user-data
@@ -409,3 +409,24 @@ Javascript Ajax call example config:
 	}
 }
 ```
+
+### Smart-Home
+
+#### Get Devices
+
+```
+cURL example call:
+
+curl -X POST \
+  http://[assist-server-host]/integrations/smart-home/getDevices \
+  -H 'Content-Type: application/json' \
+  -d '{
+	"hubName": "openhab",
+	"hubHost": "http://[openHAB-IP]:8080",
+	"deviceTypeFilter": "",
+	"KEY": "[auth-token]",
+	"client": "[client]"
+}'
+```
+
+Example for openHAB using host IP and no SSL. Make sure you have set the same 'hubName' and 'hubHost' in your server settings (optionally with auth. keys etc.).
