@@ -9,17 +9,17 @@ Overview of SEPIA ecosystem (note: some parts are still in the dev branches).
 For image icon attributions please check the [homepage](https://sepia-framework.github.io/#attributions)
 
 ## Downloads
-* SEPIA-Home (Server, Web-App + Apk, Tools): [v2.7.0](https://github.com/SEPIA-Framework/sepia-installation-and-setup/releases)
+* SEPIA-Home (Server, Web-App + Apk, Tools): [v2.7.0](https://github.com/SEPIA-Framework/sepia-installation-and-setup/releases) | [Docker HUB](https://hub.docker.com/r/sepia/home)
 * SEPIA Client - Android: [v0.25.0 Apk](https://github.com/SEPIA-Framework/sepia-installation-and-setup/releases/download/v2.7.0/SEPIA-Android-Client.apk) | [Play Store](https://play.google.com/store/apps/details?id=de.bytemind.sepia.app.web)
 * SEPIA Client - DIY (Raspberry Pi etc.): [Instructions](https://github.com/SEPIA-Framework/sepia-installation-and-setup/tree/master/sepia-client-installation)
 * SEPIA STT Server: [v1.0.0](https://github.com/SEPIA-Framework/sepia-stt-server) | [Docker Hub](https://hub.docker.com/r/sepia/stt-server)
 * SEPIA SDK: [v0.10.0](https://github.com/SEPIA-Framework/sepia-sdk-java)
 
 ## Wiki, Blog & News
-Checkout the wiki for detailed descriptions:
+Checkout the Wiki for detailed descriptions:
 [S.E.P.I.A. Framework Wiki](../../wiki)  
-Visit Twitter for the latest news:
-[S.E.P.I.A. Twitter Feed](https://twitter.com/sepia_fw)  
+Visit Twitter or Mastodon for the latest news:
+[S.E.P.I.A. Twitter Feed](https://twitter.com/sepia_fw) | [S.E.P.I.A. Mastodon Feed](https://mastodon.online/@sepia)  
 Visit the blog for summaries and guides:
 [S.E.P.I.A. Blog](https://medium.com/sepia-framework)
 
