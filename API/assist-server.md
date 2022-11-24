@@ -231,6 +231,56 @@ Possible 'action.type' values: Only 'assistant_message' at the moment (client v0
 
 ### User-Data
 
+#### Read user address
+
+```
+cURL example call:
+
+curl -X POST \
+  http://[assist-server-host]/userdata \
+  -H 'Content-Type: application/json' \
+  -d '{
+	"KEY": "[auth-token]",
+	"client": "[client]",
+	"device_id": "[device-id]",
+	"get":{
+		"addresses": [{
+			"specialTag": "user_home"
+		}]
+	}
+}'
+```
+
+NOTE: Supported `"specialTag"` values currently are `user_home` and `user_work`.
+
+#### Write user address
+
+```
+cURL example call:
+
+curl -X POST \
+  http://[assist-server-host]/userdata \
+  -H 'Content-Type: application/json' \
+  -d '{
+	"KEY": "[auth-token]",
+	"client": "[client]",
+	"device_id": "[device-id]",
+	"set": {
+    "addresses":[{
+		"specialTag": "user_work",
+		"city": "Berlin",
+		"country": "Deutschland",
+		"code": "10117",
+		"street": "Pariser Platz",
+		"s_nbr": "1",
+		"latitude": "52.516",
+		"longitude": "13.378"
+    }]}
+}'
+```
+
+NOTE: For supported `"specialTag"` values see above (same as read).
+
 #### Create To-Do user-data list
 
 ```
